@@ -1,19 +1,10 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
-  <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <id>rails-model-shadow</id>
+  <name>Rails Model Shadow</name>
+  <version>0.0.1</version>
+  <vendor email="kolyakoikelov@gmail.com" url="https://github.com/akoikelov/rm-rails-model-shadow">Aykol Koykelov</vendor>
 
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
-    ]]></description>
-
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
-  </change-notes>
+  <description>Simple RubyMine plugin which helps to see rails model fields list</description>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
