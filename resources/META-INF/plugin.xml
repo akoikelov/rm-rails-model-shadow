@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>rails-model-shadow</id>
+  <id>kg.akoikelov.intellij.rms</id>
   <name>Rails Model Shadow</name>
   <version>0.0.1</version>
   <vendor email="kolyakoikelov@gmail.com" url="https://github.com/akoikelov/rm-rails-model-shadow">Aykol Koykelov</vendor>
