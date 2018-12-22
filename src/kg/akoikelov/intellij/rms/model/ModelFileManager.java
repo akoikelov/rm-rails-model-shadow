@@ -8,11 +8,13 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
+import kg.akoikelov.intellij.rms.model.twfactory.ModelFieldsToolWindowFactory;
 import kg.akoikelov.intellij.rms.model.ui.ShowModelFieldsButton;
 import org.jetbrains.annotations.NotNull;
 
 public class ModelFileManager implements FileEditorManagerListener {
 
+    private final ToolWindowManager toolWindowManager;
     private Project currentProject;
     private FileEditorManager editorManager;
     private ToolWindow modelFieldsToolWindow;
@@ -20,13 +22,17 @@ public class ModelFileManager implements FileEditorManagerListener {
     public ModelFileManager(Project currentProject) {
         this.currentProject = currentProject;
         this.editorManager = FileEditorManagerImpl.getInstance(currentProject);
-        this.modelFieldsToolWindow = ToolWindowManager.getInstance(currentProject).getToolWindow("rails-model-fields");
+        this.toolWindowManager = ToolWindowManager.getInstance(currentProject);
     }
 
     @Override
     public void fileOpened(@NotNull FileEditorManager source, @NotNull VirtualFile virtualFile) {
         if(this.isModelClassFile(virtualFile)) {
             FileEditor editor = source.getSelectedEditor();
+
+            if (modelFieldsToolWindow == null) {
+                modelFieldsToolWindow = toolWindowManager.getToolWindow(ModelFieldsToolWindowFactory.ID);
+            }
 
             if (editor != null) {
                 editorManager.addBottomComponent(editor,

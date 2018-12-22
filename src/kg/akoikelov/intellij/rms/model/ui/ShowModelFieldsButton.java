@@ -22,7 +22,9 @@ public class ShowModelFieldsButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (modelFieldsToolWindow != null) {
 
+        }
     }
 
 }

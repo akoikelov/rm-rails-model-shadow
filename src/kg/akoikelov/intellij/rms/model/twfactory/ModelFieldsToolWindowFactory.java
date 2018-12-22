@@ -7,9 +7,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class ModelFieldsToolWindowFactory implements ToolWindowFactory {
 
+    public static final String ID = "rails-model-fields";
+
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-
     }
 
 }
