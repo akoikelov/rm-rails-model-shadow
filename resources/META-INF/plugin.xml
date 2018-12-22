@@ -15,6 +15,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
+    <toolWindow id="rails-model-fields" icon="/icons/list_16x16.png" anchor="right" factoryClass="kg.akoikelov.intellij.rms.model.twfactory.ModelFieldsToolWindowFactory" />
   </extensions>
 
   <actions>

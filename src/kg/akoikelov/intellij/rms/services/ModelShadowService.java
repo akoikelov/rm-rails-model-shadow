@@ -8,13 +8,11 @@ import kg.akoikelov.intellij.rms.model.ModelFileManager;
 
 public class ModelShadowService implements IService {
 
-    private ModelFileManager modelFileManager = new ModelFileManager();
-
     @Override
     public void init(Project currentProject) {
         MessageBus messageBus = currentProject.getMessageBus();
 
-        messageBus.connect().subscribe(FileEditorManagerListener.FILE_EDITOR_MANAGER, this.modelFileManager);
+        messageBus.connect().subscribe(FileEditorManagerListener.FILE_EDITOR_MANAGER, new ModelFileManager(currentProject));
     }
 
 }
