@@ -37,7 +37,7 @@ public class ModelFileManager implements FileEditorManagerListener {
             if (editor != null) {
                 editorManager.addBottomComponent(editor,
                         new ShowModelFieldsButton("Show model fields", modelFieldsToolWindow,
-                                virtualFile.getNameWithoutExtension()));
+                                virtualFile.getNameWithoutExtension(), currentProject));
             }
         }
     }

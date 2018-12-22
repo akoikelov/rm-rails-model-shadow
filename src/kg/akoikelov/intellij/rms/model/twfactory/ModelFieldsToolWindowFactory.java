@@ -11,6 +11,7 @@ public class ModelFieldsToolWindowFactory implements ToolWindowFactory {
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
+
     }
 
 }
