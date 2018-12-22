@@ -21,4 +21,9 @@
     <!-- Add your actions here -->
   </actions>
 
+  <project-components>
+    <component>
+      <implementation-class>kg.akoikelov.intellij.rms.RailsProjectComponent</implementation-class>
+    </component>
+  </project-components>
 </idea-plugin>
