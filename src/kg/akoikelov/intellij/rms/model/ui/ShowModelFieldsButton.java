@@ -27,7 +27,7 @@ public class ShowModelFieldsButton extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (modelFieldsToolWindow != null) {
-            SchemaParser.getInstance(project).getModelsInfo();
+            SchemaParser.getInstance(project).getTables();
         }
     }
 
