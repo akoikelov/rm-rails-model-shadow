@@ -5,10 +5,12 @@ import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.vfs.VirtualFileSystem;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiManager;
+import kg.akoikelov.intellij.rms.model.interfaces.SchemaChangeListener;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,6 +22,7 @@ public class SchemaParser {
     private final String SCHEMA_FILE_PATH = "%s/db/schema.rb";
     private final PsiManager psiManager;
     private HashMap<String, ArrayList<String>> models = new HashMap<>();
+    private List<SchemaChangeListener> changeListeners = new ArrayList<>();
 
     private Pattern tableNamePattern = Pattern.compile("\"([a-zA-Z0-9]+)\"");
 
@@ -31,12 +34,6 @@ public class SchemaParser {
         return ourInstance;
     }
 
-    private SchemaParser(Project project) {
-        this.project = project;
-        this.filesystem = this.project.getProjectFile().getFileSystem();
-        this.psiManager = PsiManager.getInstance(this.project);
-    }
-
     public HashMap<String, ArrayList<String>> getModels() {
         if (models.size() == 0) {
             syncModels();
@@ -45,7 +42,25 @@ public class SchemaParser {
         return models;
     }
 
-    public void syncModels() {
+    public void addChangeListener(SchemaChangeListener listener) {
+        this.changeListeners.add(listener);
+    }
+
+    private SchemaParser(Project project) {
+        this.project = project;
+        this.filesystem = this.project.getProjectFile().getFileSystem();
+        this.psiManager = PsiManager.getInstance(this.project);
+    }
+
+    public void triggerChange() {
+        this.syncModels();
+
+        for (SchemaChangeListener l: this.changeListeners) {
+            l.schemaChanged(this.models);
+        }
+    }
+
+    private void syncModels() {
         PsiFile schemaPsi = getPsiFile();
         boolean tableDefStart = false;
         ArrayList<String> tableFields = new ArrayList<>();
@@ -91,9 +106,8 @@ public class SchemaParser {
         String tableName = "unknown";
         Matcher matcher = tableNamePattern.matcher(token);
 
-        while (matcher.find()) {
+        if (matcher.find()) {
             tableName = matcher.group(1);
-            break;
         }
 
         return tableName;

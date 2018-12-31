@@ -3,10 +3,9 @@ package kg.akoikelov.intellij.rms.model.twfactory;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
+import kg.akoikelov.intellij.rms.model.SchemaParser;
 import kg.akoikelov.intellij.rms.model.ui.ModelListForm;
 import org.jetbrains.annotations.NotNull;
-
-import java.awt.*;
 
 public class ModelFieldsToolWindowFactory implements ToolWindowFactory {
 
@@ -14,10 +13,10 @@ public class ModelFieldsToolWindowFactory implements ToolWindowFactory {
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-        toolWindow.getComponent().add(this.createTablesList());
-    }
+        SchemaParser schemaParser = SchemaParser.getInstance(project);
+        ModelListForm form = new ModelListForm(schemaParser.getModels());
 
-    private Component createTablesList() {
-        return new ModelListForm().getRootPanel();
+        schemaParser.addChangeListener(form);
+        toolWindow.getComponent().add(form.getRootPanel());
     }
 }
