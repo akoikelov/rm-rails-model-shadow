@@ -18,14 +18,20 @@ public class ModelListForm implements SchemaChangeListener {
 
     public ModelListForm(HashMap<String, ArrayList<String>> models) {
         this.models = models;
-        createList();
+        createList(false);
     }
 
     public JPanel getRootPanel() {
         return rootPanel;
     }
 
-    private void createList() {
+    private void createList(boolean updateList) {
+        if (updateList) {
+            rootPanel.removeAll();
+            rootPanel.revalidate();
+            rootPanel.repaint();
+        }
+
         JBScrollPane scrollPane = new JBScrollPane();
         JPanel innerPanel = new JPanel();
 
@@ -45,6 +51,6 @@ public class ModelListForm implements SchemaChangeListener {
     @Override
     public void schemaChanged(HashMap<String, ArrayList<String>> models) {
         this.models = models;
-        createList();
+        createList(true);
     }
 }

@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d43e4aeb-c386-4e5f-85f6-2dab0ec424c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/SchemaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/SchemaParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelFileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ModelListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ModelListForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelListForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelListForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ShowModelFieldsButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/services/ModelShadowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/services/ModelShadowService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +37,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelFileManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="357">
+              <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/services/ModelShadowService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/SchemaParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="207">
+              <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1426#1427#0" expanded="true" />
@@ -60,10 +73,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ShowModelFieldsButton.java">
+        <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/interfaces/SchemaChangeListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="90">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +101,11 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ModelListForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="98">
+              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#563#564#0" expanded="true" />
@@ -100,11 +113,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelItemForm.form">
-          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -155,13 +163,11 @@
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/core/interfaces/IService.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelShadowService.java" />
-        <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/services/ModelShadowService.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/toolwindow/ModelFieldsToolWindow.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/twfactory/ModelFieldsToolWindow.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/Icons.java" />
         <option value="$PROJECT_DIR$/src/icons/Icons.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/RailsProjectComponent.java" />
-        <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelFileManager.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ShowModelFieldsButton.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelListForm.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelListForm1.java" />
@@ -171,8 +177,10 @@
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/twfactory/ModelFieldsToolWindowFactory.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelListForm.form" />
-        <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ModelListForm.java" />
         <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelItemForm.form" />
+        <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/services/ModelShadowService.java" />
+        <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelFileManager.java" />
+        <option value="$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ModelListForm.java" />
       </list>
     </option>
   </component>
@@ -250,14 +258,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rms" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="twfactory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rm-rails-model-shadow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rm-rails-model-shadow" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rms" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,9 +265,7 @@
               <item name="rm-rails-model-shadow" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rms" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,7 +298,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546268671868" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546273943471" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -364,12 +362,12 @@
       <workItem from="1545485690282" duration="20429000" />
       <workItem from="1545510113267" duration="187000" />
       <workItem from="1546198327143" duration="7695000" />
-      <workItem from="1546251249385" duration="16268000" />
+      <workItem from="1546251249385" duration="20859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46657000" />
+    <option name="totallyTimeSpent" value="51248000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,16 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/services/ModelShadowService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rm-rails-model-shadow.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -604,48 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelFileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ShowModelFieldsButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/interfaces/SchemaChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/SchemaParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -677,6 +623,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelListForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelItemForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ShowModelFieldsButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ModelItemForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -689,10 +651,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/services/ModelShadowService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ModelFileManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/SchemaParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/interfaces/SchemaChangeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/ModelListForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="98">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#563#564#0" expanded="true" />
@@ -700,12 +704,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelListForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kg/akoikelov/intellij/rms/model/ui/form/ModelItemForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
