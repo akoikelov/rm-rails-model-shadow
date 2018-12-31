@@ -46,18 +46,18 @@ public class SchemaParser {
         this.changeListeners.add(listener);
     }
 
-    private SchemaParser(Project project) {
-        this.project = project;
-        this.filesystem = this.project.getProjectFile().getFileSystem();
-        this.psiManager = PsiManager.getInstance(this.project);
-    }
-
     public void triggerChange() {
         this.syncModels();
 
         for (SchemaChangeListener l: this.changeListeners) {
             l.schemaChanged(this.models);
         }
+    }
+
+    private SchemaParser(Project project) {
+        this.project = project;
+        this.filesystem = this.project.getProjectFile().getFileSystem();
+        this.psiManager = PsiManager.getInstance(this.project);
     }
 
     private void syncModels() {
