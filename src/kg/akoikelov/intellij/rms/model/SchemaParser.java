@@ -19,7 +19,7 @@ public class SchemaParser {
     private final VirtualFileSystem filesystem;
     private final String SCHEMA_FILE_PATH = "%s/db/schema.rb";
     private final PsiManager psiManager;
-    private HashMap<String, ArrayList<String>> tables = new HashMap<>();
+    private HashMap<String, ArrayList<String>> models = new HashMap<>();
 
     private Pattern tableNamePattern = Pattern.compile("\"([a-zA-Z0-9]+)\"");
 
@@ -37,15 +37,15 @@ public class SchemaParser {
         this.psiManager = PsiManager.getInstance(this.project);
     }
 
-    public HashMap<String, ArrayList<String>> getTables() {
-        if (tables.size() == 0) {
-            setTables();
+    public HashMap<String, ArrayList<String>> getModels() {
+        if (models.size() == 0) {
+            syncModels();
         }
 
-        return tables;
+        return models;
     }
 
-    private void setTables() {
+    public void syncModels() {
         PsiFile schemaPsi = getPsiFile();
         boolean tableDefStart = false;
         ArrayList<String> tableFields = new ArrayList<>();
@@ -62,7 +62,7 @@ public class SchemaParser {
                     currentTable = getTableName(token);
                 } else if (token.startsWith("end")) {
                     if (tableFields.size() > 0) {
-                        tables.put(currentTable, tableFields);
+                        models.put(currentTable, tableFields);
                     }
 
                     tableFields = new ArrayList<>();

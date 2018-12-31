@@ -2,7 +2,6 @@ package kg.akoikelov.intellij.rms.model.ui;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
-import kg.akoikelov.intellij.rms.model.SchemaParser;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -27,7 +26,7 @@ public class ShowModelFieldsButton extends JButton implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (modelFieldsToolWindow != null) {
-            SchemaParser.getInstance(project).getTables();
+            modelFieldsToolWindow.show(null);
         }
     }
 
