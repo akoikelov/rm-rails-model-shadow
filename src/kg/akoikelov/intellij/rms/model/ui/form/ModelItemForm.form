@@ -10,16 +10,16 @@
     <children>
       <component id="c4c64" class="javax.swing.JLabel" binding="modelName">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <font style="1"/>
+          <font size="16" style="1"/>
           <text value="modelName"/>
         </properties>
       </component>
       <component id="3f3fb" class="com.intellij.ui.components.JBList" binding="fieldsList">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <enabled value="true"/>

@@ -1,8 +1,8 @@
 package kg.akoikelov.intellij.rms.model.interfaces;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public interface SchemaChangeListener {
-    void schemaChanged(HashMap<String, ArrayList<String>> models);
+    void schemaChanged(TreeMap<String, ArrayList<String>> models);
 }

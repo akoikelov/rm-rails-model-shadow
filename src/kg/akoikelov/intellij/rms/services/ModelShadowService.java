@@ -1,6 +1,5 @@
 package kg.akoikelov.intellij.rms.services;
 
-import com.intellij.openapi.fileEditor.FileEditorManagerListener;
 import com.intellij.openapi.project.Project;
 import com.intellij.util.messages.MessageBus;
 import kg.akoikelov.intellij.rms.core.interfaces.IService;
@@ -15,7 +14,6 @@ public class ModelShadowService implements IService {
         MessageBus messageBus = currentProject.getMessageBus();
         ModelFileManager modelFileManager = new ModelFileManager(currentProject);
 
-        messageBus.connect().subscribe(FileEditorManagerListener.FILE_EDITOR_MANAGER, modelFileManager);
         messageBus.connect().subscribe(VFS_CHANGES, modelFileManager);
     }
 

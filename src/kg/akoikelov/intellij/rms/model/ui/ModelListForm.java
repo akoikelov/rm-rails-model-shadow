@@ -6,17 +6,17 @@ import kg.akoikelov.intellij.rms.model.interfaces.SchemaChangeListener;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import static javax.swing.BoxLayout.Y_AXIS;
 
 public class ModelListForm implements SchemaChangeListener {
 
     private JPanel rootPanel;
-    private HashMap<String, ArrayList<String>> models;
+    private TreeMap<String, ArrayList<String>> models;
 
-    public ModelListForm(HashMap<String, ArrayList<String>> models) {
+    public ModelListForm(TreeMap<String, ArrayList<String>> models) {
         this.models = models;
         createList(false);
     }
@@ -44,12 +44,13 @@ public class ModelListForm implements SchemaChangeListener {
 
         scrollPane.setViewportView(innerPanel);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         rootPanel.add(scrollPane, BorderLayout.CENTER);
     }
 
     @Override
-    public void schemaChanged(HashMap<String, ArrayList<String>> models) {
+    public void schemaChanged(TreeMap<String, ArrayList<String>> models) {
         this.models = models;
         createList(true);
     }

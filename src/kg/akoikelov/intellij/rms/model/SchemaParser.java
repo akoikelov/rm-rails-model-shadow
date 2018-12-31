@@ -9,8 +9,8 @@ import kg.akoikelov.intellij.rms.model.interfaces.SchemaChangeListener;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,7 +21,7 @@ public class SchemaParser {
     private final VirtualFileSystem filesystem;
     private final String SCHEMA_FILE_PATH = "%s/db/schema.rb";
     private final PsiManager psiManager;
-    private HashMap<String, ArrayList<String>> models = new HashMap<>();
+    private TreeMap<String, ArrayList<String>> models = new TreeMap<>();
     private List<SchemaChangeListener> changeListeners = new ArrayList<>();
 
     private Pattern tableNamePattern = Pattern.compile("\"([a-zA-Z0-9]+)\"");
@@ -34,7 +34,7 @@ public class SchemaParser {
         return ourInstance;
     }
 
-    public HashMap<String, ArrayList<String>> getModels() {
+    public TreeMap<String, ArrayList<String>> getModels() {
         if (models.size() == 0) {
             syncModels();
         }
@@ -46,7 +46,7 @@ public class SchemaParser {
         this.changeListeners.add(listener);
     }
 
-    public void triggerChange() {
+    void triggerChange() {
         this.syncModels();
 
         for (SchemaChangeListener l: this.changeListeners) {
