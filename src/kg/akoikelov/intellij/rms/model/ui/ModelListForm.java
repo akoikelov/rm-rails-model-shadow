@@ -28,8 +28,6 @@ public class ModelListForm implements SchemaChangeListener {
     private void createList(boolean updateList) {
         if (updateList) {
             rootPanel.removeAll();
-            rootPanel.revalidate();
-            rootPanel.repaint();
         }
 
         JBScrollPane scrollPane = new JBScrollPane();
@@ -47,6 +45,7 @@ public class ModelListForm implements SchemaChangeListener {
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         rootPanel.add(scrollPane, BorderLayout.CENTER);
+        rootPanel.paintComponents(rootPanel.getGraphics());
     }
 
     @Override
