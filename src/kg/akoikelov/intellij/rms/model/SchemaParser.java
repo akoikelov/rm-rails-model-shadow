@@ -70,7 +70,7 @@ public class SchemaParser {
             String[] tokens = schemaPsi.getText().split("\n");
 
             for (String token: tokens) {
-                token = token.trim();
+                token = token.trim().replaceAll("\\s+", " ");
 
                 if (token.startsWith("create_table")) {
                     tableDefStart = true;
