@@ -24,7 +24,7 @@ public class SchemaParser {
     private TreeMap<String, ArrayList<String>> models = new TreeMap<>();
     private List<SchemaChangeListener> changeListeners = new ArrayList<>();
 
-    private Pattern tableNamePattern = Pattern.compile("\"([a-zA-Z0-9]+)\"");
+    private Pattern tableNamePattern = Pattern.compile("\"([a-zA-Z0-9_]+)\"");
 
     public static SchemaParser getInstance(Project project) {
         if (ourInstance == null) {
