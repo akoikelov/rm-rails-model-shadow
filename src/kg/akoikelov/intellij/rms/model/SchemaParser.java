@@ -77,6 +77,16 @@ public class SchemaParser {
                     currentTable = getTableName(token);
                 } else if (token.startsWith("end")) {
                     if (tableFields.size() > 0) {
+                        tableFields.sort((o1, o2) -> {
+                            if (o1.contains("_id") && !o2.contains("_id")) {
+                                return 1;
+                            } else if (!o1.contains("_id") && o2.contains("_id")) {
+                                return -1;
+                            }
+
+                            return 0;
+                        });
+
                         models.put(currentTable, tableFields);
                     }
 
