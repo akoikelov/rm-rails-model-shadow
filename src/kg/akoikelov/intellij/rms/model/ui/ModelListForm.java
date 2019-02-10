@@ -37,7 +37,7 @@ public class ModelListForm implements SchemaChangeListener {
         innerPanel.setAutoscrolls(true);
 
         for (Map.Entry entry: models.entrySet()) {
-            innerPanel.add(new ModelItemForm(entry).build());
+            innerPanel.add(new ModelItemForm(entry, true).build());
         }
 
         scrollPane.setViewportView(innerPanel);

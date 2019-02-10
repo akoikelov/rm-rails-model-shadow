@@ -9,21 +9,27 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class ModelItemForm {
+    private boolean includeIndex;
     private JLabel modelName;
     private JBList fieldsList;
     private JPanel rootContainer;
     private Map.Entry entry;
 
-    ModelItemForm(Map.Entry entry) {
+    public ModelItemForm(Map.Entry entry, boolean includeIndex) {
         this.entry = entry;
+        this.includeIndex = includeIndex;
     }
 
-    Component build() {
+    public Component build() {
         modelName.setText((String) entry.getKey());
 
         CollectionListModel<String> items = new CollectionListModel<>();
 
         for (String i: (ArrayList<String>) entry.getValue()) {
+            if (!this.includeIndex && i.startsWith("t.index")) {
+                continue;
+            }
+
             items.add(i);
         }
 

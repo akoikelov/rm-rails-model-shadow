@@ -84,7 +84,9 @@ public class SchemaParser {
                     tableFields = new ArrayList<>();
                     tableDefStart = false;
                 } else if (tableDefStart) {
-                    tableFields.add(token);
+                    if (!this.isTimestampsField(token)) {
+                        tableFields.add(token);
+                    }
                 }
             }
         }
@@ -112,5 +114,9 @@ public class SchemaParser {
         }
 
         return tableName;
+    }
+
+    private boolean isTimestampsField(String token) {
+        return token.startsWith("t.datetime \"created_at\"") || token.startsWith("t.datetime \"updated_at\"");
     }
 }
