@@ -16,7 +16,6 @@ import java.util.regex.Pattern;
 
 public class SchemaParser {
 
-    private static SchemaParser ourInstance;
     private final Project project;
     private final VirtualFileSystem filesystem;
     private final String SCHEMA_FILE_PATH = "%s/db/schema.rb";
@@ -25,14 +24,6 @@ public class SchemaParser {
     private List<SchemaChangeListener> changeListeners = new ArrayList<>();
 
     private Pattern tableNamePattern = Pattern.compile("\"([a-zA-Z0-9_]+)\"");
-
-    public static SchemaParser getInstance(Project project) {
-        if (ourInstance == null) {
-            ourInstance = new SchemaParser(project);
-        }
-
-        return ourInstance;
-    }
 
     public TreeMap<String, ArrayList<String>> getModels() {
         if (models.size() == 0) {
@@ -54,7 +45,7 @@ public class SchemaParser {
         }
     }
 
-    private SchemaParser(Project project) {
+    public SchemaParser(Project project) {
         this.project = project;
         this.filesystem = this.project.getProjectFile().getFileSystem();
         this.psiManager = PsiManager.getInstance(this.project);
