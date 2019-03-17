@@ -10,6 +10,17 @@
       <preferredSize width="0" height="0"/>
     </properties>
     <border type="none"/>
-    <children/>
+    <children>
+      <component id="5fd3e" class="javax.swing.JTextField" binding="searchField">
+        <constraints border-constraint="North"/>
+        <properties/>
+      </component>
+      <grid id="fd45" binding="container" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
   </grid>
 </form>
